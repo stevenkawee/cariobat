@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/catalog_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Home" />
+    <item
+        android:id="@+id/catalog_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Cart" />
+    <item
+        android:id="@+id/catalog_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="AI Chatting" />
+    <item
+        android:id="@+id/catalog_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Profile" />
+    <item
+        android:id="@+id/catalog_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Logout" />
+</menu>
