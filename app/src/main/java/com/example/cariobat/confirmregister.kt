@@ -37,14 +37,13 @@ class confirmregister : AppCompatActivity() {
 
 
         btnfinalregis.setOnClickListener {
-            // Mengambil data dari halaman confirm register
+
             val allergy = etAllergy.text.toString().trim()
             val pregnancyStatus = if (cbPregnancyStatus.isChecked) "Ya" else "Tidak"
             val internalDisease = etInternalDisease.text.toString().trim()
             val liverKidneyIssue = if (cbLiverKidneyIssue.isChecked) "Ya" else "Tidak"
             val herbalConsumption = if (cbHerbalConsumption.isChecked) "Ya" else "Tidak"
 
-            // Membuat objek user dengan semua data yang dikumpulkan
             val user = User(
                 username = username,
                 email = email,
@@ -56,10 +55,11 @@ class confirmregister : AppCompatActivity() {
                 pregnancyStatus = pregnancyStatus,
                 internalDisease = if (internalDisease.isNotEmpty()) internalDisease else null,
                 liverKidneyIssue = liverKidneyIssue,
-                herbalConsumption = herbalConsumption
+                herbalConsumption = herbalConsumption,
+                saldo = 0.0,
+                idOrder = ""
             )
 
-            // Menyimpan data user di Room database menggunakan coroutine
             CoroutineScope(Dispatchers.IO).launch {
                 val userDao = DatabaseClient.getInstance(applicationContext).userDao()
                 userDao.insertUser(user)

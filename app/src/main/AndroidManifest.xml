@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Cariobat"
         tools:targetApi="31">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
             android:name=".home_page"
             android:exported="false" />
         <activity

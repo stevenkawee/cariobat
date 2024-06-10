@@ -35,6 +35,10 @@ class register : AppCompatActivity() {
             if (username.isNotEmpty() && email.isNotEmpty() && phoneNumber.isNotEmpty() &&
                 address.isNotEmpty() && age.isNotEmpty() && selectedGenderId != -1) {
                 val gender = findViewById<RadioButton>(selectedGenderId).text.toString()
+                // Saldo default 0
+                val saldo = 0.0
+                // Id order awalnya null
+                val idOrder: String? = null
 
                 val intent = Intent(this, confirmregister::class.java).apply {
                     putExtra("USERNAME", username)
@@ -43,6 +47,8 @@ class register : AppCompatActivity() {
                     putExtra("ADDRESS", address)
                     putExtra("AGE", age.toInt())
                     putExtra("GENDER", gender)
+                    putExtra("SALDO", saldo)
+                    putExtra("ID_ORDER", idOrder)
                 }
                 startActivity(intent)
             } else {

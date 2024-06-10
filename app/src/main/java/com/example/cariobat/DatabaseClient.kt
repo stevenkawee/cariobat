@@ -5,7 +5,6 @@ import androidx.room.Room
 
 object DatabaseClient {
     private var instance: AppDatabase? = null
-
     fun getInstance(context: Context): AppDatabase {
         if (instance == null) {
             synchronized(AppDatabase::class) {
