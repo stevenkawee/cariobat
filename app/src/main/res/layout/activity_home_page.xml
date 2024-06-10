@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".home_page">
 
+    <TextView
+        android:id="@+id/tvnamalogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView3"
         android:name="androidx.navigation.fragment.NavHostFragment"
