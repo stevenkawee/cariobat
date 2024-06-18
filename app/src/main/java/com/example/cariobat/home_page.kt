@@ -13,8 +13,7 @@ import androidx.navigation.fragment.findNavController
 
 class home_page : AppCompatActivity() {
     private lateinit var container: FragmentContainerView
-    private lateinit var tvNamaLogin: TextView
-    private lateinit var textView9: TextView
+
 
     private var username: String = ""
     private var email: String = ""
@@ -24,26 +23,26 @@ class home_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
-        container = findViewById(R.id.fragmentContainerView3)
 
 
-        val email = intent.getStringExtra("EMAIL") ?: ""
-        val phoneNumber = intent.getStringExtra("PHONE_NUMBER") ?: ""
-        val address = intent.getStringExtra("ADDRESS") ?: ""
-        val age = intent.getIntExtra("AGE", 0)
 
-        tvNamaLogin = findViewById(R.id.tvnamalogin)
-        textView9 = findViewById(R.id.textView9)
-        container = findViewById(R.id.fragmentContainerView3)
-        val username = intent.getStringExtra("USERNAME") ?: "Pengguna"
-        val saldo = intent.getStringExtra("saldo") ?: "0"
-        tvNamaLogin.text = "$username!"
-        textView9.text = "Saldo anda : Rp$saldo"
+//        val email = intent.getStringExtra("EMAIL") ?: ""
+//        val phoneNumber = intent.getStringExtra("PHONE_NUMBER") ?: ""
+//        val address = intent.getStringExtra("ADDRESS") ?: ""
+//        val age = intent.getIntExtra("AGE", 0)
+//
+//        tvNamaLogin = findViewById(R.id.tvnamalogin)
+//        textView9 = findViewById(R.id.textView9)
+//        container = findViewById(R.id.fragmentContainerView3)
+//        val username = intent.getStringExtra("USERNAME") ?: "Pengguna"
+//        val saldo = intent.getStringExtra("saldo") ?: "0"
+//        tvNamaLogin.text = "$username!"
+//        textView9.text = "Saldo anda : Rp$saldo"
 
 //        if (savedInstanceState == null) {
 //            supportFragmentManager.beginTransaction()
 //                .replace(container.id, catalogobat())
-//                .commitNow()
+//                .commitNow()f
 //        }
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -67,13 +66,26 @@ class home_page : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.catalog_logout ->{
+            R.id.catalog_chat -> {
+                val intent = Intent(this, Chatbot::class.java)
+                startActivity(intent)
+                finish()
+                return true
+            }
+            R.id.catalog_map -> {
+                val intent = Intent(this, Map::class.java)
+                startActivity(intent)
+                finish()
+                return true
+            }
+            R.id.catalog_logout -> {
                 logoutUser()
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
     private fun logoutUser() {
         val intent = Intent(this, MainActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

@@ -10,13 +10,13 @@ interface UserDao {
     @Insert
     suspend fun insertUser(user: User)
 
-//    @Query("SELECT * FROM users WHERE username = :username AND email = :email LIMIT 1")
-//    fun getCurrentUser(username: String, email: String): User
+    @Query("SELECT * FROM users WHERE username = :username")
+    fun getUserByUsername(username: String): User?
+
+
 
     @Query("SELECT * FROM users LIMIT 1")
     fun getCurrentUser(): User
-
-
 
     @Update
     suspend fun updateUser(user: User)

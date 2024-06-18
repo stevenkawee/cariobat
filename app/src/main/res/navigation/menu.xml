@@ -13,5 +13,8 @@
         android:id="@+id/mainActivity"
         android:name="com.example.cariobat.MainActivity"
         android:label="activity_main"
-        tools:layout="@layout/activity_main" /><action android:id="@+id/action_global_catalogobat" app:destination="@id/catalogobat"/>
+        tools:layout="@layout/activity_main" />
+    <action
+        android:id="@+id/action_global_catalogobat"
+        app:destination="@id/catalogobat"/>
 </navigation>

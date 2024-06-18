@@ -58,7 +58,7 @@ class profile : AppCompatActivity() {
         }
 
         btnUpdateProfile.setOnClickListener {
-           
+
             val updatedUser = User(
                 id = user.id,
                 username = etUsername.text.toString(),
@@ -66,7 +66,7 @@ class profile : AppCompatActivity() {
                 phoneNumber = etPhone.text.toString(),
                 address = etAddress.text.toString(),
                 age = etAge.text.toString().toInt(),
-                // Menyediakan nilai default untuk parameter opsional
+
                 allergies = null,
                 gender = String(),
                 herbalConsumption = null,
