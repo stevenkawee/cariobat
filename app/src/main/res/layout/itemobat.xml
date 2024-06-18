@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="254dp"
-        android:layout_height="117dp"
-        android:layout_marginLeft="20dp"
+    <ImageView
+        android:id="@+id/imgitem"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_weight="1"
-        android:text="Button" />
+        android:src="@drawable/obat_obat" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,25 +25,16 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="TextView"
+            android:text="Nama"
             android:textSize="24sp" />
 
         <TextView
-            android:id="@+id/tvdetailobat"
+            android:id="@+id/tvharga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="TextView"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvhargaobat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_weight="1"
-            android:text="TextView"
+            android:text="Harga"
             android:textSize="16sp" />
 
         <Button
@@ -54,7 +45,7 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:backgroundTint="#8BC34A"
-            android:text="Lihat" />
+            android:text="Buy" />
     </LinearLayout>
 
 </LinearLayout>
